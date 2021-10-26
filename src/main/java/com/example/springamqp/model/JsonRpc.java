@@ -1,18 +1,21 @@
 package com.example.springamqp.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonRpc<T> implements Serializable {
 
+    @JsonProperty("jsonrpc")
     private String jsonrpc;
 
+    @JsonProperty("method")
     private String method;
 
+    @JsonProperty("id")
     private String id;
 
+    @JsonProperty("params")
     private T params;
 
     public String getJsonrpc() {

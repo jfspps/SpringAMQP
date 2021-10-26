@@ -4,3 +4,11 @@ This project is an extension of a demo given [here](https://thepracticaldevelope
 looks to show how [JSON-RPC 2.0](https://www.jsonrpc.org/specification) messages can be published and consumed.
 
 Also see [here](https://github.com/jfspps/SpringAndRabbitMQDemo) for another demo.
+
+The broker account settings are saved (and can be extended) in [applications.properties](/src/main/resources/application.properties).
+
+To send a message, use 
+
+```bash
+GET http://localhost:5000/api/v1/sendAMQP
+```

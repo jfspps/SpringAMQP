@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQ {
 
-    public static final String EXCHANGE_NAME = "appExchange";
-    public static final String QUEUE_NAME = "appSpecificQueue";
+    public static final String EXCHANGE_NAME = "amq.topic";
+    public static final String QUEUE_NAME = "spring-amqp";
     public static final String ROUTING_KEY = "messages.key";
 
     @Bean
