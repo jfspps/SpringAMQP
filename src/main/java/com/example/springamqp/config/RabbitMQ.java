@@ -19,9 +19,6 @@ public class RabbitMQ {
     public static final String QUEUE_NAME = "spring-amqp";
     public static final String ROUTING_KEY = "messages.key";
 
-    @Value("${spring.rabbitmq.host}")
-    private String host;
-
     @Bean
     public TopicExchange appExchange() {
         return new TopicExchange(EXCHANGE_NAME);
